@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <form method="POST" action="/">
+            <h1>{{news.title}}</h1>
+            <input type="hidden" name="title" value="{{news.title}}">
+            <h3>{{news.author}}</h3>
+            <input type="hidden" name="author" value="{{news.author}}">
+            <p>{{news.description}}</p>
+            <input type="hidden" name="description" value="{{news.description}}">
+            <input type="hidden" name="url" value="{{news.url}}">
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Save Gossip</button>
+            </div>
+        </form>
+    </div>
+</div>

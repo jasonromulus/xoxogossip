@@ -1,0 +1,16 @@
+<fieldset>
+    {{!-- TITLE --}}
+    <div class="form-group">
+        <label for="entry-title">Title</label><br>
+        <input class="form-control" id="entry-title" type="text" name="title" value="{{entries.title}}"/>
+    </div>
+    {{!-- TEXT --}}
+    <div class="form-group">
+        <label for="entry-content">Tea of Day</label>
+        <textarea class="form-control" id="entry-content" name="content" rows="25">{{entries.content}}</textarea>
+    </div>
+    {{!-- BUTTON --}}
+    <div class="form-group">
+        <button class="btn-primary"type="submit">Save Tea</button>
+    </div>
+</fieldset>

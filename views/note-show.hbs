@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <div class="card  mb-4">
+            <div class="card-body bg-success">
+                <h1 class="card-title">{{note.noteTitle}}</h1>
+                <p class="card-text">{{note.content}}</p>
+            </div>
+        </div>
+        <div class="pb-3">
+            <a href="/articles/{{note.articleId}}/notes/{{note._id}}/edit" class="btn text-white btn-primary">Edit</a>
+        </div>
+        <div>
+            <form action="/articles/{{note.articleId}}/notes/{{note._id}}?_method=DELETE" method="POST">
+                <button class="btn text-primary btn-white" type="submit">Burn the Tea</button>
+            </form>
+        </div>
+    </div>
+</div>

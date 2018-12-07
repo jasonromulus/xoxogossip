@@ -1,0 +1,21 @@
+<div class="row">   
+    <div class="col-md-12 col-md-offset-4">
+        <a href="{{article.url}}"><u><h1 class="text-white p-1" align="center">{{article.title}}</h1></u></a>
+        <h3 class="p-2">By: {{article.author}}</h3>
+        <p class="p-2">{{article.description}}</p>
+        <div class="pb-3">
+            <a href="/articles/{{article._id}}/notes/new" class="btn text-white btn-primary">Write Down The Tea</a>
+        </div>
+        <div><form action="/articles/{{article.id}}?_method=DELETE" method="POST">
+            <button type="submit" class="btn text-white btn-primary">Delete Tea</button>
+        </form></div>
+
+        <hr>
+        <h1>The Tea</h1>
+        <div class="card">
+            {{#each note}}
+                <a href="/articles/{{this.articleId}}/notes/{{this._id}}"><h3 class="card-title">{{this.noteTitle}}</h3></a>
+            {{/each}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="leftside">
+                <div class="form-group">
+                    <h2><label for="entry-list">Tea To Spill Later</label></h2>
+                    <ul class="list-group">
+                        {{#each article}}
+                            <li class="list-group-item bg-success">
+                                <strong>
+                                    <a class="text-white" href="/articles/{{this._id}}">{{this.title}}</a>
+                                </strong>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-md-offset-3 right">
+            <div class="rightside">
+                <h1 align="center">Gossip Of The Day</h1>
+                <div class="card-columns">
+                    {{#each news}}
+                        <div class="card text-black bg-success mb-3" id="{{this.title}}">
+                            <a href="{{this.url}}"><img class="card-img-top p-1" src="{{this.urlToImage}}" alt="Card image cap"></a>
+                            <strong><h4 class="card-title p-2">{{this.title}}</h4></strong>
+                            <h6 class="card-text p-2">{{this.author}}</h6>
+                            <div class="p-1">
+                                <a href="/new/{{@index}}" class="btn text-warning btn-dark p-1">See The Gossip</a>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

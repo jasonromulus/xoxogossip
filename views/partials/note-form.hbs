@@ -1,0 +1,14 @@
+<fieldset>
+    <legend>Tea to Tell</legend>
+    <!-- NOTE TITLE -->
+    <div class="form-group">
+        <label for="note-title">What will the burn be called?</label><br>
+        <input class="form-control" id="note-title" type="text" name="noteTitle" value="{{note.noteTitle}}" />
+    </div>
+
+    <!-- CONTENT -->
+    <div class="form-group">
+        <label for="note-content">Tell Me More</label><br>
+        <textarea class="form-control" id="note-content" name="content" rows="25" />{{note.content}}</textarea>
+    </div>
+</fieldset>
